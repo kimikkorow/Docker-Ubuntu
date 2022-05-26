@@ -1,4 +1,4 @@
-FROM kimikkorow/ubuntu:20.04
+FROM kimikkorow/ubuntu20.04:latest
 
 ADD . /app
 
