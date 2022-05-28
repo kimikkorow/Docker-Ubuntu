@@ -2,9 +2,7 @@
 name: CI to Docker Hub
 
 # 在 Push 到 main 分支后启动该流程
-on:
-  push:
-    branches: [ main ]
+on: workflow_dispatch
 
 jobs:
   build:
