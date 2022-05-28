@@ -1,5 +1,5 @@
 #!/bin/sh
-imageName="ubuntu20.04:bt"
+imageName="ubuntu20.04:btpanel"
 
 echo "清除原有内容"
 docker stop $imageName
