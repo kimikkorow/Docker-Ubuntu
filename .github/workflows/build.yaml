@@ -40,7 +40,7 @@ jobs:
           context: ./Ubuntu-20.04-Openjdk-17
           file: ./Ubuntu-20.04-Openjdk-17/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu20.04:openjdk17
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu20.04:openjdk-17
 
       # 构建并发布（执行项目路径下的 Dockerfile 文件）
       - name: Build ubuntu20.04:openjdk8 and push
@@ -50,7 +50,7 @@ jobs:
           context: ./Ubuntu-20.04-Openjdk-8
           file: ./Ubuntu-20.04-Openjdk-8/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu20.04:openjdk8
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu20.04:openjdk-8
 
       # 完成
       - name: Image digest
