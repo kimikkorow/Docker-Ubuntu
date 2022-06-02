@@ -10,7 +10,7 @@ jobs:
     steps:
       # 在 GitHub Action 的服务器上 Check Out 源码（整体流程结束后会重置服务器环境因此不需要担心泄露）
       - name: Check Out Repo 
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       # 登录至 Docker Hub，账户密码需要在 Settings -> Secrets 中设置
       - name: Login to Docker Hub
         uses: docker/login-action@v1
@@ -20,7 +20,7 @@ jobs:
       # 设置 Buildx 为构建镜像做准备
       - name: Set up Docker Buildx
         id: buildx
-        uses: docker/setup-buildx-action@v1
+        uses: docker/setup-buildx-action@v2
 
       # 构建并发布（执行项目路径下的 Dockerfile 文件）
       - name: Build ubuntu20.04:latest and push
