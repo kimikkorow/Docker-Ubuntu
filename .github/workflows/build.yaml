@@ -5,6 +5,9 @@ name: CI to Docker Hub
 on:
   schedule:
     - cron:  '30 8 * * 6'
+on:
+  workflow_dispatch:
+  
 jobs:
   build:
     runs-on: ubuntu-latest
