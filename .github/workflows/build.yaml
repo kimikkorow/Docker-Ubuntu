@@ -2,8 +2,9 @@
 name: CI to Docker Hub
 
 # 在 Push 到 main 分支后启动该流程
-on: workflow_dispatch
-
+on:
+  schedule:
+    - cron:  '30 8 * * 1'
 jobs:
   build:
     runs-on: ubuntu-latest
