@@ -1,4 +1,6 @@
-FROM kimikkorow/ubuntu20.04:latest
+FROM ubuntu:20.04
+
+ENV TZ=Asia/Shanghai
 
 ADD . /app
 
