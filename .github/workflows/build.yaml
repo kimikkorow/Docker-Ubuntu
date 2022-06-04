@@ -53,6 +53,16 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu20.04:openjdk-8
 
+      # 构建并发布（执行项目路径下的 Dockerfile 文件）
+      - name: Build ubuntu20.04:nginx and push
+        id: nginx
+        uses: docker/build-push-action@v2
+        with:
+          context: ./Ubuntu-20.04-Nginx
+          file: ./Ubuntu-20.04-Nginx/Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu20.04:nginx
+
       # 完成
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
