@@ -9,7 +9,8 @@ echo ${TZ} > /etc/timezone
 dpkg-reconfigure --frontend noninteractive tzdata
 
 echo "安装依赖"
-apt install openjdk-8-jdk openjdk-8-jre -y
+apt install sudo nano git wget curl openjdk-8-jdk openjdk-8-jre -y
+
 
 echo "清理垃圾"
 apt autoremove -y
