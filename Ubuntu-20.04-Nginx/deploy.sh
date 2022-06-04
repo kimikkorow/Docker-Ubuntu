@@ -1,5 +1,5 @@
 #!/bin/sh
-imageName="ubuntu20.04:nginx"
+imageName="ubuntu:nginx"
 
 echo "清除原有内容"
 docker stop $imageName

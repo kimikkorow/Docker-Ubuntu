@@ -1,4 +1,6 @@
-FROM kimikkorow/ubuntu20.04:latest
+FROM ubuntu/nginx:latest
+
+ENV TZ=Asia/Shanghai
 
 ADD . /app
 
