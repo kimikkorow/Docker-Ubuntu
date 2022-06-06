@@ -3,13 +3,13 @@ apt update
 apt upgrade -y
 
 echo "设置时区"
-apt install -y tzdata 
-ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime 
-echo ${TZ} > /etc/timezone 
+apt install -y tzdata
+ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime
+echo ${TZ} >/etc/timezone
 dpkg-reconfigure --frontend noninteractive tzdata
 
 echo "安装依赖"
-apt install python3 pip3 python-pip python-dev build-essential -y
+apt install sudo nano git wget curl python3 pip3 python-pip python-dev build-essential -y
 sudo pip install --upgrade pip -y
 sudo pip3 install --upgrade pip -y
 
