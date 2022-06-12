@@ -4,8 +4,8 @@ apt upgrade -y
 
 echo "设置时区"
 apt install -y tzdata
-ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime
-echo ${TZ} >/etc/timezone
+ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+echo Asia/Shanghai >/etc/timezone
 dpkg-reconfigure --frontend noninteractive tzdata
 
 echo "清理垃圾"
