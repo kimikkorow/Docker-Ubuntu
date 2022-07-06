@@ -9,7 +9,8 @@ echo Asia/Shanghai >/etc/timezone
 dpkg-reconfigure --frontend noninteractive tzdata
 
 echo "安装依赖"
-apt install sudo nano git wget curl openjdk-17-jdk openjdk-17-jre -y
+apt install sudo -y
+sudo apt install nano git wget curl openjdk-17-jdk -y
 
 echo "清理垃圾"
 apt autoremove -y
