@@ -41,8 +41,8 @@ jobs:
         id: latest
         uses: docker/build-push-action@v3
         with:
-          context: ./Ubuntu-20.04
-          file: ./Ubuntu-20.04/Dockerfile
+          context: ./Ubuntu-22.04
+          file: ./Ubuntu-22.04/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:latest
@@ -52,8 +52,8 @@ jobs:
         id: openjdk17
         uses: docker/build-push-action@v3
         with:
-          context: ./Ubuntu-20.04-Openjdk-17
-          file: ./Ubuntu-20.04-Openjdk-17/Dockerfile
+          context: ./Ubuntu-22.04-Openjdk-17
+          file: ./Ubuntu-22.04-Openjdk-17/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:openjdk-17
@@ -63,8 +63,8 @@ jobs:
         id: openjdk8
         uses: docker/build-push-action@v3
         with:
-          context: ./Ubuntu-20.04-Openjdk-8
-          file: ./Ubuntu-20.04-Openjdk-8/Dockerfile
+          context: ./Ubuntu-22.04-Openjdk-8
+          file: ./Ubuntu-22.04-Openjdk-8/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:openjdk-8
@@ -74,8 +74,8 @@ jobs:
         id: nginx
         uses: docker/build-push-action@v3
         with:
-          context: ./Ubuntu-20.04-Nginx
-          file: ./Ubuntu-20.04-Nginx/Dockerfile
+          context: ./Ubuntu-22.04-Nginx
+          file: ./Ubuntu-22.04-Nginx/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:nginx
