@@ -1,4 +1,4 @@
-FROM ubuntu/nginx
+FROM ubuntu/nginx:latest
 
 ENV TZ=Asia/Shanghai
 

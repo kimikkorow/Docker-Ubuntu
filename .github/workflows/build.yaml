@@ -70,15 +70,15 @@ jobs:
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:openjdk-8
 
       # 构建并发布（执行项目路径下的 Dockerfile 文件）
-      # - name: Build ubuntu22.04:nginx and push
-      #   id: nginx
-      #   uses: docker/build-push-action@v3
-      #   with:
-      #     context: ./Ubuntu-22.04-Nginx
-      #     file: ./Ubuntu-22.04-Nginx/Dockerfile
-      #     platforms: linux/amd64,linux/arm64
-      #     push: true
-      #     tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:nginx
+      - name: Build ubuntu22.04:nginx and push
+        id: nginx
+        uses: docker/build-push-action@v3
+        with:
+          context: ./Ubuntu-22.04-Nginx
+          file: ./Ubuntu-22.04-Nginx/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:nginx
 
       # 完成
       - name: Image digest
