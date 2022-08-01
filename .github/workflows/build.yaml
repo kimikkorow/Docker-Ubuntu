@@ -36,38 +36,38 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
     
-      # # 构建并发布（执行项目路径下的 Dockerfile 文件）
-      # - name: Build ubuntu22.04:latest and push
-      #   id: latest
-      #   uses: docker/build-push-action@v3
-      #   with:
-      #     context: ./Ubuntu-22.04
-      #     file: ./Ubuntu-22.04/Dockerfile
-      #     platforms: linux/amd64,linux/arm64
-      #     push: true
-      #     tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:latest
+      # 构建并发布（执行项目路径下的 Dockerfile 文件）
+      - name: Build ubuntu22.04:latest and push
+        id: latest
+        uses: docker/build-push-action@v3
+        with:
+          context: ./Ubuntu-22.04
+          file: ./Ubuntu-22.04/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:latest
 
-      # # 构建并发布（执行项目路径下的 Dockerfile 文件）
-      # - name: Build ubuntu22.04:openjdk17 and push
-      #   id: openjdk17
-      #   uses: docker/build-push-action@v3
-      #   with:
-      #     context: ./Ubuntu-22.04-Openjdk-17
-      #     file: ./Ubuntu-22.04-Openjdk-17/Dockerfile
-      #     platforms: linux/amd64,linux/arm64
-      #     push: true
-      #     tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:openjdk-17
+      # 构建并发布（执行项目路径下的 Dockerfile 文件）
+      - name: Build ubuntu22.04:openjdk17 and push
+        id: openjdk17
+        uses: docker/build-push-action@v3
+        with:
+          context: ./Ubuntu-22.04-Openjdk-17
+          file: ./Ubuntu-22.04-Openjdk-17/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:openjdk-17
 
-      # # 构建并发布（执行项目路径下的 Dockerfile 文件）
-      # - name: Build ubuntu22.04:openjdk8 and push
-      #   id: openjdk8
-      #   uses: docker/build-push-action@v3
-      #   with:
-      #     context: ./Ubuntu-22.04-Openjdk-8
-      #     file: ./Ubuntu-22.04-Openjdk-8/Dockerfile
-      #     platforms: linux/amd64,linux/arm64
-      #     push: true
-      #     tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:openjdk-8
+      # 构建并发布（执行项目路径下的 Dockerfile 文件）
+      - name: Build ubuntu22.04:openjdk8 and push
+        id: openjdk8
+        uses: docker/build-push-action@v3
+        with:
+          context: ./Ubuntu-22.04-Openjdk-8
+          file: ./Ubuntu-22.04-Openjdk-8/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:openjdk-8
 
       # 构建并发布（执行项目路径下的 Dockerfile 文件）
       # - name: Build ubuntu22.04:nginx and push
