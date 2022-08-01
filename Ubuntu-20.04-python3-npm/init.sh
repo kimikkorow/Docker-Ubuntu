@@ -9,6 +9,9 @@ echo Asia/Shanghai >/etc/timezone
 dpkg-reconfigure --frontend noninteractive tzdata
 
 echo "安装依赖"
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+# 设置node v14.x软件源
+apt update
 apt install sudo -y
 sudo apt install nano git wget curl python3 npm -y
 
