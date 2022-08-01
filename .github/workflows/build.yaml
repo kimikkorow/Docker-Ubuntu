@@ -43,7 +43,8 @@ jobs:
         with:
           context: ./Ubuntu-22.04
           file: ./Ubuntu-22.04/Dockerfile
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
+          # platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:latest
 
@@ -54,7 +55,8 @@ jobs:
         with:
           context: ./Ubuntu-22.04-Openjdk-17
           file: ./Ubuntu-22.04-Openjdk-17/Dockerfile
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
+          # platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:openjdk-17
 
@@ -65,7 +67,8 @@ jobs:
         with:
           context: ./Ubuntu-22.04-Openjdk-8
           file: ./Ubuntu-22.04-Openjdk-8/Dockerfile
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
+          # platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:openjdk-8
 
@@ -76,7 +79,8 @@ jobs:
       #   with:
       #     context: ./Ubuntu-22.04-Nginx
       #     file: ./Ubuntu-22.04-Nginx/Dockerfile
-      #     platforms: linux/amd64,linux/arm64
+          # platforms: linux/amd64
+          # # platforms: linux/amd64,linux/arm64
       #     push: true
       #     tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu22.04:nginx
 
