@@ -5,7 +5,6 @@ apt install -y tzdata
 ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime
 echo ${TZ} >/etc/timezone
 dpkg-reconfigure --frontend noninteractive tzdata
-rm -rf /var/lib/apt/lists/*
 
 echo "安装依赖"
 apt install sudo nano git wget curl python3 pip3 python-pip python-dev build-essential -y
@@ -22,6 +21,7 @@ pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 echo "清理垃圾"
 apt autoremove -y
 apt autoclean -y
+rm -rf /var/lib/apt/lists/*
 
 echo "更换阿里源"
 echo "deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse

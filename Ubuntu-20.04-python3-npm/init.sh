@@ -5,7 +5,6 @@ apt install -y tzdata
 ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime
 echo ${TZ} >/etc/timezone
 dpkg-reconfigure --frontend noninteractive tzdata
-rm -rf /var/lib/apt/lists/*
 
 echo "安装依赖"
 # curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
@@ -17,6 +16,7 @@ sudo apt install nano git wget curl python3 npm -y
 echo "清理垃圾"
 apt autoremove -y
 apt autoclean -y
+rm -rf /var/lib/apt/lists/*
 
 echo "更换阿里源"
 echo "deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
